@@ -1,8 +1,7 @@
-
-
 import 'package:calculator/constants/appcolors.dart';
 import 'package:calculator/constants/button_values.dart';
 import 'package:calculator/widgets/body_container.dart';
+import 'package:calculator/widgets/text_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -132,6 +131,10 @@ class _CalulatorScreenState extends State<CalulatorScreen> {
         child: Center(
           child: Column(
             children: [
+              const Padding(
+                padding: EdgeInsets.only(top: 40),
+                child: SpecialButtonText(text: 'Calculator'),
+              ),
               //output
 
               SingleChildScrollView(
@@ -158,7 +161,7 @@ class _CalulatorScreenState extends State<CalulatorScreen> {
                       .map(
                         (value) => Padding(
                           padding: const EdgeInsets.symmetric(
-                              horizontal: 8.0, vertical: 4.0),
+                              horizontal: 4.0, vertical: 8.0),
                           child: SizedBox(
                             width: [Btn.rst, Btn.calculate].contains(value)
                                 ? MediaQuery.of(context).size.width * 0.333

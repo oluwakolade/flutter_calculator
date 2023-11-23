@@ -9,7 +9,7 @@ class ScreenContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.symmetric(vertical: 20),
+      margin: const EdgeInsets.only(top: 60, bottom: 20),
       alignment: Alignment.bottomRight,
       width: MediaQuery.of(context).size.width * 0.8,
       height: MediaQuery.of(context).size.width * 0.3, // 80% of screen width
